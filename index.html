@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Enfield | Test Ride &amp; Owner Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="brand">
+            <span class="brand-mark">RE</span>
+            <span class="brand-word">ROYAL ENFIELD</span>
+        </div>
+        <button class="btn-ghost" id="scroll-to-form">Book Test Ride</button>
+    </div>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-copy">
+        <p class="eyebrow">Since 1901 &middot; Built for the Long Ride</p>
+        <h1 class="hero-heading">OWN THE ROAD.<br>MAKE IT YOURS.</h1>
+        <p class="hero-sub">Six legends. One decision waiting on your driveway. Register below and book a test ride at your nearest dealership.</p>
+    </div>
+
+    <div class="carousel" id="carousel" aria-roledescription="carousel">
+
+        <div class="carousel-track" id="carousel-track">
+
+            <article class="slide is-active" data-index="0">
+                <div class="slide-art">
+                    <img class="slide-img" src="Royal_Enfield_Bullet_Redditch_Enfield_Cycle_Co__Ltd_Motorcycle.png" alt="Royal Enfield Classic 350">
+                </div>
+                <div class="slide-caption">
+                    <span class="slide-index">01</span>
+                    <h3>Classic 350</h3>
+                    <p>The silhouette that started it all.</p>
+                </div>
+            </article>
+
+            <article class="slide" data-index="1">
+                <div class="slide-art">
+                    <img class="slide-img" src="Royal_Enfield_Bullet___le_retour_de_la_vraie_moto_vintage___Belles_Machines.png" alt="Royal Enfield Bullet 350">
+                </div>
+                <div class="slide-caption">
+                    <span class="slide-index">02</span>
+                    <h3>Bullet 350</h3>
+                    <p>A legacy that refuses to fade.</p>
+                </div>
+            </article>
+
+            <article class="slide" data-index="2">
+                <div class="slide-art">
+                    <img class="slide-img" src="Royal_enfield_hunter.png" alt="Royal Enfield Hunter 350">
+                </div>
+                <div class="slide-caption">
+                    <span class="slide-index">03</span>
+                    <h3>Hunter 350</h3>
+                    <p>Light. Agile. Built for the city hunt.</p>
+                </div>
+            </article>
+
+            <article class="slide" data-index="3">
+                <div class="slide-art">
+                    <img class="slide-img" src="2026_Royal_Enfield_Meteor_350_in_Fireball_Grey.png" alt="Royal Enfield Meteor 350">
+                </div>
+                <div class="slide-caption">
+                    <span class="slide-index">04</span>
+                    <h3>Meteor 350</h3>
+                    <p>Cruise control for the soul.</p>
+                </div>
+            </article>
+
+            <article class="slide" data-index="4">
+                <div class="slide-art">
+                    <img class="slide-img" src="Himalayan_450_Motorcycle_Prices___Colours___Royal_Enfield_India.png" alt="Royal Enfield Himalayan 450">
+                </div>
+                <div class="slide-caption">
+                    <span class="slide-index">05</span>
+                    <h3>Himalayan 450</h3>
+                    <p>Every terrain. Zero limits.</p>
+                </div>
+            </article>
+
+            <article class="slide" data-index="5">
+                <div class="slide-art">
+                    <img class="slide-img" src="Royal_Enfield_Guerrilla_450_Price___Mileage__Images__Colours___InfoHub24.png" alt="Royal Enfield Guerrilla 450">
+                </div>
+                <div class="slide-caption">
+                    <span class="slide-index">06</span>
+                    <h3>Guerrilla 450</h3>
+                    <p>Unfiltered. Unapologetic. Urban.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <button class="carousel-btn prev" id="prev-btn" aria-label="Previous slide">&#8249;</button>
+        <button class="carousel-btn next" id="next-btn" aria-label="Next slide">&#8250;</button>
+
+        <div class="carousel-dots" id="carousel-dots"></div>
+
+    </div>
+
+    <div class="scroll-cue" id="scroll-cue">
+        <span></span>
+        Scroll to register
+    </div>
+
+</section>
+
+<section class="form-section" id="register">
+
+    <div class="form-heading">
+        <p class="eyebrow">Reserve Your Ride</p>
+        <h2>Royal Enfield Registration Form</h2>
+        <p class="form-sub">Register your interest and book your dream ride.</p>
+    </div>
+
+    <form id="re-form" class="re-form" novalidate>
+
+        <div class="field-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" autocomplete="name">
+            <span class="field-error" id="err-fullName"></span>
+        </div>
+
+        <div class="field-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+            <span class="field-error" id="err-email"></span>
+        </div>
+
+        <div class="field-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10">
+            <span class="field-error" id="err-phone"></span>
+        </div>
+
+        <div class="field-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="18+" min="18">
+            <span class="field-error" id="err-age"></span>
+        </div>
+
+        <fieldset class="field-group fieldset-inline">
+            <legend>Gender</legend>
+            <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="gender" value="Male"><span>Male</span></label>
+                <label class="radio-pill"><input type="radio" name="gender" value="Female"><span>Female</span></label>
+                <label class="radio-pill"><input type="radio" name="gender" value="Other"><span>Other</span></label>
+            </div>
+            <span class="field-error" id="err-gender"></span>
+        </fieldset>
+
+        <div class="field-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city">
+            <span class="field-error" id="err-city"></span>
+        </div>
+
+        <div class="field-group">
+            <label for="state">State</label>
+            <select id="state" name="state">
+                <option value="" disabled selected>Select your state</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+                <option>Delhi (NCT)</option>
+            </select>
+            <span class="field-error" id="err-state"></span>
+        </div>
+
+        <div class="field-group">
+            <label for="model">Preferred Royal Enfield Model</label>
+            <select id="model" name="model">
+                <option value="" disabled selected>Select a model</option>
+                <option>Classic 350</option>
+                <option>Bullet 350</option>
+                <option>Hunter 350</option>
+                <option>Meteor 350</option>
+                <option>Himalayan 450</option>
+                <option>Guerrilla 450</option>
+                <option>Shotgun 650</option>
+                <option>Interceptor 650</option>
+                <option>Continental GT 650</option>
+                <option>Super Meteor 650</option>
+            </select>
+            <span class="field-error" id="err-model"></span>
+        </div>
+
+        <fieldset class="field-group fieldset-inline span-2">
+            <legend>Purpose</legend>
+            <div class="checkbox-row">
+                <label class="check-pill"><input type="checkbox" name="purpose" value="Daily Commute"><span>Daily Commute</span></label>
+                <label class="check-pill"><input type="checkbox" name="purpose" value="Weekend Touring"><span>Weekend Touring</span></label>
+                <label class="check-pill"><input type="checkbox" name="purpose" value="Adventure Riding"><span>Adventure Riding</span></label>
+                <label class="check-pill"><input type="checkbox" name="purpose" value="Long Trips"><span>Long Trips</span></label>
+                <label class="check-pill"><input type="checkbox" name="purpose" value="Collector"><span>Collector</span></label>
+            </div>
+            <span class="field-error" id="err-purpose"></span>
+        </fieldset>
+
+        <fieldset class="field-group fieldset-inline">
+            <legend>Already Own a Royal Enfield</legend>
+            <div class="radio-row">
+                <label class="radio-pill"><input type="radio" name="ownsRE" value="Yes"><span>Yes</span></label>
+                <label class="radio-pill"><input type="radio" name="ownsRE" value="No"><span>No</span></label>
+            </div>
+            <span class="field-error" id="err-ownsRE"></span>
+        </fieldset>
+
+        <div class="field-group">
+            <label for="rideDate">Preferred Test Ride Date</label>
+            <input type="date" id="rideDate" name="rideDate">
+            <span class="field-error" id="err-rideDate"></span>
+        </div>
+
+        <div class="field-group span-2">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" placeholder="Anything you'd like us to know..."></textarea>
+        </div>
+
+        <div class="field-group span-2 terms-group">
+            <label class="check-pill terms-pill">
+                <input type="checkbox" id="terms" name="terms">
+                <span>I agree to the <a href="#" tabindex="-1">Terms &amp; Conditions</a> of Royal Enfield.</span>
+            </label>
+            <span class="field-error" id="err-terms"></span>
+        </div>
+
+        <div class="form-actions span-2">
+            <button type="submit" class="btn-submit" id="submit-btn">
+                <span class="btn-label">Submit Registration</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+            <button type="reset" class="btn-reset" id="reset-btn">Reset</button>
+        </div>
+
+    </form>
+
+    <div class="success-toast" id="success-toast" role="status">
+        <span class="toast-icon">&#10003;</span>
+        <span>Registration Successful!</span>
+    </div>
+
+</section>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Royal Enfield Registration Portal &middot; Built for riders, by riders.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
